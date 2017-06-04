@@ -1,0 +1,28 @@
+﻿package projeto14c;
+
+//Powered by Henrique Treza
+public class Projeto14c {
+
+    public static void main(String[] args) {
+
+        for (int p = 1; p < 12; p++) {
+            System.out.println("linha louca");
+        }
+
+        for (int p = 0; p < 11; p++) {
+            System.out.println("Somos os primeiros");
+        }
+        int p = 0;
+
+        if (p < 5) {
+        } else {
+            System.out.println("Somos os ultimos");
+        }
+        if (p == 10) {
+            System.out.println("Sou o ultimo");
+        }
+
+    }
+}
+
+

@@ -1,0 +1,35 @@
+﻿package aula15a;
+//Powered by Henrique Treza
+
+import java.util.Scanner;
+
+public class Aula15a {
+
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+        String nome = "";
+        while (nome.equals("")) {
+            System.out.println("Digite o seu nome: ");
+            nome = leitor.nextLine();
+        }
+        int idade = 0;
+        while (idade < 16 || idade > 80) {
+            System.out.println("Digite a sua idade: ");
+            idade = leitor.nextInt();
+        }
+        double nota1 = -1;
+        while (nota1 < 0 || nota1 > 10) {
+            System.out.println("Digite a primeira nota: ");
+            nota1 = leitor.nextInt();
+        }
+        double nota2 = -1;
+        while (nota2 < 0 || nota2 > 10) {
+            System.out.println("Digite a segunda nota: ");
+            nota2 = leitor.nextInt();
+        }
+        double media = (nota1 + nota2) / 2;
+        System.out.println(nome + ", você tem " + idade + " anos e sua média é " + media);
+    }
+}
+
+

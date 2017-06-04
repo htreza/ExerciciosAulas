@@ -1,0 +1,24 @@
+﻿package aula16a;
+//Powered by Henrique Treza
+import java.util.Scanner;
+
+public class Aula16a {
+
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+        System.out.println("Digite quantas vezes você quer ver o seu nome: ");
+        int vezes = leitor.nextInt();
+        leitor.nextLine();
+        System.out.println("Digite o seu nome: ");
+        String nome = leitor.nextLine();
+        int i = 1;
+        while (i <= vezes) {
+            System.out.println(nome);
+            i++;
+        }
+    }
+}
+
+
+
+

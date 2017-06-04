@@ -1,0 +1,44 @@
+﻿package aula13a;
+
+import java.util.Scanner;
+//Powered by Henrique Treza
+
+public class Aula13a {
+
+    public static void main(String[] args) {
+
+        Scanner leitor = new Scanner(System.in);
+
+        System.out.println("1) Inteira");
+        System.out.println("2) Meia");
+        System.out.println("3) Cortesia");
+        System.out.println("Digite o tipo do seu ingresso: ");
+        String tipoIngresso = leitor.nextLine();
+        System.out.println("Qual é o valor do ingresso? ");
+        double valor = leitor.nextDouble();
+
+        switch (tipoIngresso) {
+            case "1":
+                valor *= 1.05;
+                break;
+            case "2":
+                valor *= 0.55;
+                break;
+            case "3":
+                valor = 0;
+                break;
+            default:
+                System.out.println("Qual parte de 1 a 3 você não entendeu?");
+                System.exit(0);
+        }
+
+        String vr = String.format("", valor);
+
+        System.out.println("Valor do ingresso: R$" + valor + "0");
+
+    }
+}
+
+
+
+

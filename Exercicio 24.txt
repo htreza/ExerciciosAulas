@@ -1,0 +1,43 @@
+package aula24;
+
+//Powered by Henrique Treza
+import java.util.Scanner;
+
+public class Aula24 {
+
+    public static void main(String[] args) {
+
+        Scanner leitor = new Scanner(System.in);
+
+        System.out.println("Digite o seu nome");
+        String nome = leitor.nextLine();
+        System.out.println(nome + ", digite a sua idade");
+        int idade = leitor.nextInt();
+        leitor.nextLine();
+        System.out.println(nome + ", digite a sua massa");
+        double massa = leitor.nextDouble();
+        leitor.nextLine();
+        System.out.println(nome + ", digite a quantidade de meses desde a sua última doação (0 se nunca doou)");
+        int mesesDesdeUltimaDoacao = leitor.nextInt();
+        leitor.nextLine();
+        if (validarDoador(idade, massa, mesesDesdeUltimaDoacao)) {
+            System.out.println("Parabéns " + nome + ", você pode doar sangue!");
+        } else {
+            System.out.println(nome + ", infelizmente você não pode doar sangue.");
+        }
+    }
+
+    public static boolean validarDoador(int idade, double massa, int mesesDesdeUltimaDoacao) {
+        boolean idadeValida = (idade >= 16 && idade <= 69);
+        boolean massaValida = (massa > 50);
+        boolean podeDoar = (mesesDesdeUltimaDoacao >= 6 || mesesDesdeUltimaDoacao == 0);
+        return idadeValida && massaValida && podeDoar;
+    }
+}
+
+
+
+
+
+
+

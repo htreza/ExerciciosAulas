@@ -1,0 +1,29 @@
+﻿package aula16b;
+//Powered by Henrique Treza
+
+import java.util.Scanner;
+
+public class Aula16b {
+
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+        System.out.println("Digite de qual número quer começar: ");
+        int comecar = leitor.nextInt();
+        leitor.nextLine();
+        System.out.println("Digite de qual número quer terminar: ");
+        int terminar = leitor.nextInt();
+        if (terminar <= comecar) {
+            System.out.println("Não pode terminar antes de começar!");
+            System.exit(0);
+        }
+        while (comecar <= terminar) {
+            System.out.println(comecar);
+            comecar += 2;
+        }
+    }
+}
+
+
+
+
+

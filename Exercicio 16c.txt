@@ -1,0 +1,29 @@
+﻿package aula16c;
+//Powered by Henrique Treza
+
+import java.util.Scanner;
+
+public class Aula16c {
+
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+        int i = 1;
+        double valorTotal = 0;
+        while (i <= 5) {
+            System.out.println("Digite o preço do produto " + i + ": ");
+            double preco = leitor.nextDouble();
+            if (preco <= 0) {
+                break;
+            }
+            valorTotal += preco;
+            i++;
+        }
+        System.out.println("Valor total dos produtos: R$" + valorTotal + "0.");
+    }
+}
+
+
+
+
+
+

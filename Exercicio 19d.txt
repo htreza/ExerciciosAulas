@@ -1,0 +1,44 @@
+package aula19d;
+
+//Powered by Henrique Treza
+import java.util.Scanner;
+
+public class Aula19d {
+
+    public static void main(String[] args) {
+
+        Scanner leitor = new Scanner(System.in);
+
+        System.out.println("Digite a quantidade de depósitos");
+        int totalDepositos = leitor.nextInt();
+        leitor.nextLine();
+        double investimento[][] = new double[totalDepositos][2];
+        for (int i = 0; i < totalDepositos; i++) {
+            double deposito = -1;
+            while (deposito < 0) {
+                System.out.println("Digite o valor do deposito");
+                deposito = leitor.nextDouble();
+                leitor.nextLine();
+            }
+            investimento[i][0] = deposito;
+            double imposto = -1;
+            while (imposto < 0 || imposto >= deposito) {
+                System.out.println("Digite o valor do imposto");
+                imposto = leitor.nextDouble();
+                leitor.nextLine();
+            }
+            investimento[i][1] = imposto;
+            System.out.println("Você depositou um total de R$" + deposito + " e pagou um total de R$" + imposto
+                    + ", com um lucro total de R$" + (deposito - imposto));
+        }
+        System.out.println("Digite o depósito para ser revisto (de 1 a " + totalDepositos + "): ");
+        int conferir = leitor.nextInt() - 1;
+        leitor.nextLine();
+        System.out.println("No depósito número " + conferir + " você depositou R$"
+                + investimento[conferir][0] + " e pagou R$" + investimento[conferir][1] + " de impostos");
+    }
+}
+
+
+
+
